@@ -29,7 +29,46 @@
         />
     </head>
     <body>
-        
+        <div class="login-Card w-11/12 sm:w-9/12 md:w-7/16 2xl:w-5/16  mx-auto my-15 shadow-md rounded-lg p-8">
+            <img
+                src="./assets/github-logo.png"
+                alt="gitHub logo"
+                class="mx-auto"
+            />
+            <h1 class="text-[#1f2937] text-3xl font-semibold text-center mt-6">
+                GitHub Issues Tracker
+            </h1>
+            <p class="text-center text-[#64748b]">
+                Sign in to manage your issues
+            </p>
 
+            <!-- login form  -->
+            <form
+                class="fieldset p-4 mx-auto my-4"
+            >
+                <label class="label text-[#1f2937] text-base font-medium leading-tight">Username</label>
+                <input type="text" class="input w-full" id="username-input" placeholder="Enter Username" />
+                <p class="text-[#4a00ff] text-sm leading-tight">Default: admin</p>
+
+                <label class="label text-[#1f2937] text-base font-medium leading-tight mt-4">Password</label>
+                <input type="password" class="input w-full" id="password" placeholder="Password" />
+                <p class="text-[#4a00ff] text-sm leading-tight">Default: admin123</p>
+
+                <button class="btn btn-primary mt-4 text-base font-semibold" id="login-btn" type="button">Sign In</button>
+            </form>
+
+
+            <div class="flex items-center gap-2">
+                <div class="border-t flex-grow border-gray-300"></div>
+                <div class="text-[#1F2937]">OR</div>
+                <div class="border-t flex-grow border-gray-300"></div>
+            </div>
+
+            <p class="my-6 text-[#64748b] text-center text-sm">Demo Credentials:</p>
+            <p class="text-[#1f2937] leading-tight text-center"><span class="text-[#1f2937] leading-tight font-semibold">Username: </span>admin</p>
+            <p class="text-[#1f2937] leading-tight text-center"><span class="text-[#1f2937] leading-tight font-semibold">Password: </span>admin123</p>
+        </div>
+
+        <script src="./scripts/login.js"></script>
     </body>
 </html>
