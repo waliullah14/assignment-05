@@ -31,7 +31,8 @@ searchbtn.addEventListener("click", () => {
     allBtn.classList.remove("btn-primary");
     openBtn.classList.remove("btn-primary");
     closedBtn.classList.remove("btn-primary");
-    url = ""
+    url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchInput}`;
+    loadData(url, "search");
 });
 
 function toggleBtn(btn) {
@@ -56,7 +57,7 @@ async function loadData(url, btn) {
         displayCard(closedData);
     }
 
-    if (btn === "all") {
+    if (btn === "all" || btn === "search") {
         displayCard(data.data);
     }
 }
@@ -110,3 +111,5 @@ function badgeGenerator(labels) {
     );
     return badges.join("");
 }
+
+function showSpinner()
