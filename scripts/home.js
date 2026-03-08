@@ -2,29 +2,36 @@ const allBtn = document.getElementById("btn-all");
 const openBtn = document.getElementById("btn-open");
 const closedBtn = document.getElementById("btn-closed");
 const searchbtn = document.getElementById("search-btn");
+const spinnerSect = document.getElementById("spinner-section");
+const issuSect = document.getElementById("issue-section");
 let url = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
 loadData(url, "all");
 
 allBtn.addEventListener("click", () => {
+    showSpinner();
     toggleBtn(allBtn);
     url = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
     loadData(url, "all");
 });
 openBtn.addEventListener("click", () => {
+    showSpinner();
     toggleBtn(openBtn);
     url = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
     loadData(url, "open");
 });
 closedBtn.addEventListener("click", () => {
+    showSpinner();
     url = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
     toggleBtn(closedBtn);
     loadData(url, "closed");
 });
 searchbtn.addEventListener("click", () => {
+    showSpinner();
     const searchInput = document.getElementById("search-input").value;
     console.log(searchInput);
     if (searchInput.trim() === "") {
         alert("Please enter search text.");
+        hideSpinner();
         return;
     }
 
@@ -102,6 +109,8 @@ function displayCard(cards) {
 
         cardContainer.appendChild(newCard);
     });
+
+    hideSpinner();
 }
 
 function badgeGenerator(labels) {
@@ -112,4 +121,11 @@ function badgeGenerator(labels) {
     return badges.join("");
 }
 
-function showSpinner()
+function showSpinner() {
+    issuSect.classList.add("hidden");
+    spinnerSect.classList.remove("hidden");
+}
+function hideSpinner() {
+    spinnerSect.classList.add("hidden");
+    issuSect.classList.remove("hidden");
+}
