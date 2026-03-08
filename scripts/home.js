@@ -65,6 +65,9 @@ async function loadData(url, btn) {
     }
 
     if (btn === "all" || btn === "search") {
+        if (data.data.length === 0) {
+            alert("No Result Found")
+        }
         displayCard(data.data);
     }
 }
