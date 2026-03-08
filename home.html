@@ -40,7 +40,7 @@
     <body class="max-w-[1600px] mx-auto">
         <header>
             <nav
-                class="px-6 md:px-10 py-5 lg:px-20 flex flex-col md:flex-row items-center justify-between shadow-sm gap-4"
+                class="w-11/12 mx-auto py-5 flex flex-col sm:flex-row items-center justify-between gap-4"
             >
                 <div class="logo">
                     <h1
@@ -58,13 +58,73 @@
                     <input
                         type="text"
                         placeholder="Search issues..."
-                        class="h-10 rounded-sm text-[#1f2937] pl-2 pr-8 placeholder:text-[#6b7280] border border-[#d1d5db] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        class="h-10 rounded-sm text-[#1f2937] pl-2 pr-8 placeholder:text-[#6b7280] border border-[#d1d5db] focus:outline-none focus:ring-2 focus:ring-blue-500 w-11/12 sm:w-auto" id="search-input"
                     />
-                    <button class="btn border-none bg-transparent absolute right-30" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button
+                        class="btn border-none bg-transparent absolute right-30"
+                        id="search-btn"
+                    >
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                     <button class="btn btn-primary">+ New Issue</button>
                 </div>
             </nav>
         </header>
+
+        <main class="bg-[#f8fafc] py-14 border-t-1 border-[#e5e7eb]">
+            <div
+                class="filter-container bg-white w-11/12 mx-auto p-6 rounded-lg shadow-sm space-x-2"
+            >
+                <button class="btn btn-primary" id="btn-all">All</button>
+                <button class="btn" id="btn-open">Open</button>
+                <button class="btn" id="btn-closed">Closed</button>
+            </div>
+
+            <section
+                class="issue-section w-11/12 mx-auto mt-4 shadow-sm rounded-lg"
+            >
+                <div
+                    class="issue-heading flex flex-col sm:flex-row items-start justify-between bg-white p-6 rounded-t-lg sm:items-center gap-4 border-b border-[#e5e7eb]"
+                >
+                    <div class="flex items-center gap-5">
+                        <div>
+                            <img
+                                class="outline-8 outline-[#ECE4FF] rounded-full"
+                                src="assets/Aperture.png"
+                                alt="aperture"
+                            />
+                        </div>
+                        <div>
+                            <h2 class="text-[#1F2937] text-xl font-semibold">
+                                <span id="issue-count">0</span> Issues
+                            </h2>
+                            <p class="text-[#64748B]">
+                                Track and manage your project issues
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-[#1F2937] font-medium">
+                            <span class="text-[#00A96E]"
+                                ><i class="fa-solid fa-circle"></i
+                            ></span>
+                            Open &nbsp;&nbsp;
+                            <span class="text-[#A855F7]"
+                                ><i class="fa-solid fa-circle"></i
+                            ></span>
+                            Closed
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-[#FBFBFB] p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 rounded-b-lg" id="issue-container"
+                >
+                </div>
+
+            </section>
+        </main>
 
         <script src="./scripts/home.js"></script>
     </body>
