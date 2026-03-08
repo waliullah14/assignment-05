@@ -21,6 +21,6 @@ btn.addEventListener("click", () => {
     }
 
     if (username && password) {
-        window.location.assign("../home.html");
+        window.location.assign("home.html");
     }
 })
