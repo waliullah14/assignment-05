@@ -91,7 +91,7 @@ function displayDetail(card) {
     let modal = document.createElement("div");
     modal.innerHTML = `<div class="modal-box p-8 space-y-4 ">
                     <h3 class="text-lg font-bold">${card.title}</h3>
-                    <div class="flex items-center space-x-2">
+                    <div class="sm:flex items-center space-x-2 space-y-3 sm:space-y-0">
                         <div class="badge ${card.status === "open" ? `bg-[#00A96E]` : `bg-[#A855F7]`} text-white rounded-full text-xs">
                             ${card.status === "open" ? `Open` : `Closed`}
                         </div>
