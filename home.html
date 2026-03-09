@@ -73,7 +73,6 @@
         </header>
 
         <main class="bg-[#f8fafc] py-14 border-t-1 border-[#e5e7eb]">
-
             <div
                 class="filter-container bg-white w-11/12 mx-auto p-6 rounded-lg shadow-sm space-x-2"
             >
@@ -82,12 +81,16 @@
                 <button class="btn" id="btn-closed">Closed</button>
             </div>
 
-            <section class="flex justify-center items-center h-[400px hidden" id="spinner-section">
+            <section
+                class="flex justify-center items-center h-[400px hidden"
+                id="spinner-section"
+            >
                 <span class="loading loading-spinner loading-xl mx-auto"></span>
             </section>
 
             <section
-                class="issue-section w-11/12 mx-auto mt-4 shadow-sm rounded-lg" id="issue-section"
+                class="issue-section w-11/12 mx-auto mt-4 shadow-sm rounded-lg"
+                id="issue-section"
             >
                 <div
                     class="issue-heading flex flex-col sm:flex-row items-start justify-between bg-white p-6 rounded-t-lg sm:items-center gap-4 border-b border-[#e5e7eb]"
@@ -129,8 +132,19 @@
                     id="issue-container"
                 ></div>
             </section>
+
+            <!-- modal for detail  -->
+            <!-- Open the modal using ID.showModal() method -->
+
+            <dialog
+                id="detail_modal"
+                class="modal modal-bottom sm:modal-middle"
+            >
+
+            </dialog>
         </main>
 
+        <script src="scripts/machine.js"></script>
         <script src="./scripts/home.js"></script>
     </body>
 </html>
