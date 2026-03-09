@@ -1,128 +1,24 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
+1️⃣ What is the difference between var, let, and const? <br>
+Let, var, and const are used to declare variable. But they have some differences.
+1. var is function scoped and let and const are block scoped.
+2. Variables declared with var can be accessed even before the declaration is executed in the code. But it is not possible for let and const.
+3. Variables declared with var and let can be reassign with new value. But it can not be done for const.
 
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
+2️⃣ What is the spread operator (...)? <br>
+Spread operator is an operator that provides the individual element of an array, object or string. We can say spread operator brings out all the elements of an array, object or string for using them. Spread function is mainly used for copying (creating a new copy without copying the reference), merging and sending the elements of an array as arguments of a function.
 
----
+3️⃣ What is the difference between map(), filter(), and forEach()?<br>
+map(), filter() and forEach() are array method that loop through arrays to conduct different operations. But all of them does not work in the same manner.
+1. map() is used to do any operation to the each element of an array. map() returns a new array after conducting the operation.
+2. filter() is used to select the elements that fulfill the given condition. then it returns the selected elements of the array.
+3. forEach() does not return any value. It loops through each element and execute the code.
 
-# Assignment-05: GitHub Issues Tracker
-
-
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
-
-
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
-
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
-
-
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
-
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
-
-
----
-
-## 📝 Main Requirements
-
-## 🎨 Design Part
-
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
-
-## Main Page: 
-
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
-
-
---- 
-
-
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status 
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on an issue  card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
-
-
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
-
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
-
-
----
-
-## 🛠️ Technology Stack
-
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
-
----
-
-## 🔑 Demo Credentials
-
-```text
-Username: admin
-Password: admin123
+4️⃣ What is an arrow function?<br>
+An arrow function is a function that is declared using the following syntax:
+```js
+const functionName = () => return value;
 ```
+It is a useful way to write small functions to reduce code length.
 
-
----
-
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
-
-
-## 📤 What to submit
-
-- **GitHub Repository Link:**
-- **Live Site Link:**
-
----
-
-
+5️⃣ What are template literals?<br>
+Template literal is a way of writing string inside backticks ``. It has some benefits which can not be gained using "" or ''. Using template literals we can directly use any variable inside the string using the following syntax: ${variableName}. It also plays important role in conditional rendering inside a string. Thus this helps to make the code cleaner and easy to understand.
